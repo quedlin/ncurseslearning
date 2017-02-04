@@ -1,4 +1,5 @@
 #include "ncurses.h"
+#include <string.h> 
 // 80x25 character screen
 
 int main()
