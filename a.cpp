@@ -1,4 +1,5 @@
 #include "ncurses.h"
+#include <stdlib.h>
 #include <string.h> 
 // 80x25 character screen
 
@@ -14,16 +15,30 @@ int main()
 	
 
 
-	char mesg[]="Just a string";		/* message to be appeared on the screen */
-	int row,col;				/* to store the number of rows and *
-					 * the number of colums of the screen */
-	initscr();				/* start the curses mode */
-	getmaxyx(stdscr,row,col);		/* get the number of rows and columns */
+	
+	
+	
+	
+	start_color();			/* Start color functionality	*/
+	
+	init_pair(1, COLOR_CYAN, COLOR_BLACK);
+	printw("A Big string which i didn't care to type fully ");
+	mvchgat(0, 0, -1, A_BLINK, 1, NULL);	
+	
+	
+	
+	
+	/*
+	char mesg[]="Just a string";	
+	int row,col;				
+					 
+				
+	getmaxyx(stdscr,row,col);		
 	mvprintw(row/2,(col-strlen(mesg))/2,"%s",mesg);
-									/* print the message at the center of the screen */
+									
 	mvprintw(row-2,0,"This screen has %d rows and %d columns\n",row,col);
 	printw("Try resizing your window(if possible) and then run this program again");
-
+	*/
 	
 /*
 
