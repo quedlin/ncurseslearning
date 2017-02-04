@@ -11,6 +11,7 @@ int main()
 	noecho();	//Don't echo() while we do getch
 
 /*
+
 	move(4,50);
 	printw("Hai there");
 	move(4,9);
