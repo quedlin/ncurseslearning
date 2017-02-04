@@ -13,9 +13,9 @@ int main(int argc, char *argv[])
 	int ch;
 
 	initscr();	//Start curses mode
-	raw();		//Line buffering disabled
+	cbreak();		//Line buffering disabled
 	keypad(stdscr, TRUE);	//We get F1, F2 etc...
-	noecho();	//Don't echo() while we do getch
+	//noecho();	//Don't echo() while we do getch
 	/*-----------------------------------------------------*/
 	
 
